@@ -1,0 +1,137 @@
+/* Global Config */
+
+* { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    --heading: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    color: #000;
+}
+
+/* Global Styles */
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* Navigation */
+
+
+    /* Main Nav */
+
+#main-header {
+    background: #0f0f0f;
+    color: #fff;
+    width: 100vw;
+
+    padding: 15px 12px;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-nav .brand h1 {
+    font-family: var(--heading);
+}
+
+/* can style size of fa icons here */
+.top-nav .fas{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+    /* Nav Links */
+
+#main-nav-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main-nav-links ul li {
+    padding: 10px 0;
+}
+
+#main-nav-links ul li a {
+    padding: 3px 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    /* text-transform: uppercase; */
+}
+
+#main-nav-links ul li a:hover {
+    color: #d7d7d7;
+    border-bottom: 2px solid #d7d7d7;
+     
+}
+
+/* Javascript-related Styles */
+
+.hamburger-btn ,.times-btn {
+    cursor: pointer;
+}
+
+.times-btn {
+    display: none;
+}
+
+#main-nav-links .nav-links {
+    background: #333;
+
+    height: 0;
+    overflow: hidden;
+
+    margin: 20px -20px -20px;
+}
+
+#main-nav-links .nav-links.nav-show {
+    height: auto;
+}
+
+/* Responsive Breakpoints */
+
+@media only screen and (min-width: 768px) {
+
+    .fas.fa-bars, .fas.fa-times {
+        display: none!important
+    }
+
+    #main-header .navigation-container {
+        display: flex;
+        align-items: center;
+    }
+
+    #main-nav-links .nav-links {          
+        height: inherit;
+        overflow: hidden;
+
+        margin: 0 auto;
+        margin-left: 30px;
+    }
+
+    #main-nav-links ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        background: #0f0f0f;
+    }
+
+    #main-nav-links ul li {
+        padding-left: 20px;   
+        transition: all 1s ease-in-out
+    }
+}
