@@ -23,6 +23,14 @@ li {
     list-style: none;
 }
 
+/* can style size of fa icons here */
+.fas{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+
 /* Navigation */
 
 
@@ -44,12 +52,6 @@ li {
 
 .top-nav .brand h1 {
     font-family: var(--heading);
-}
-
-/* can style size of fa icons here */
-.top-nav .fas{
-    font-size: 2rem;
-    cursor: pointer;
 }
 
 
@@ -109,6 +111,7 @@ li {
     grid-template: 1fr;
 
     margin: 30px 20px;
+    margin-top: 60px;
 }
 
 #top-content .top-content-left .header h2 {
@@ -358,7 +361,63 @@ li {
     padding: 5px;
 }
 
+/* Footer */
 
+#main-footer {
+    background-color: #0e0f0f;
+    color:#fff;
+    padding: 30px;;
+}
+
+#main-footer .footer-left,
+#main-footer .footer-right {
+    padding: 12px 15px;
+}
+
+#main-footer h2 {
+    font-size: 2rem;
+
+    margin-bottom: 10px;
+}
+
+#main-footer p {
+    font-family: var(--heading);
+    font-weight: 100;
+}
+
+#main-footer .footer-right .email-field {
+    width: 250px;
+    margin-top: 10px;    
+    border-bottom: 1px solid #c9c9c9;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main-footer .footer-right .email-field input {
+    width: 80%;
+    background: transparent;
+    font-size: 1.2rem;
+    padding: 12px 0;
+    border: none;
+    color: #fff;
+}
+
+#main-footer .footer-right .email-field input:hover,
+#main-footer .footer-right .email-field input:focus {
+    outline: none;
+}
+
+#main-footer .footer-right .email-field .fas {   
+    font-size: 1.8rem;
+    cursor: default
+}
+
+#main-footer > p {
+    margin-top: 30px;
+    text-align: center;
+}
 
 /* Responsive Breakpoints */
 
@@ -410,6 +469,16 @@ li {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         column-gap: 20px;
+    }
+
+    /* Footer */
+    #main-footer .footer-container {
+        display: flex;
+    }
+
+    #main-footer .footer-container .footer-left,
+    #main-footer .footer-container .footer-right {
+        flex: 1;
     }
 }
 
